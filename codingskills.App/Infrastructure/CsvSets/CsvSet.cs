@@ -12,12 +12,17 @@ namespace codingskills.App.Infrastructure.CsvSets
         where T : class
         where TMap : ClassMap<T>
     {
-        private readonly string location;
+        private string location;
 
-        public CsvSet(string location)
+        public CsvSet()
+        {
+        }
+        
+        public void InitLocation(string location)
         {
             this.location = location;
-        }                
+        }
+
         public IList<T> ReadCsv()
         {
             try 

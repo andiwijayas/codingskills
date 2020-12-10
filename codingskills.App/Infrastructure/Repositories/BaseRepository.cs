@@ -18,6 +18,11 @@ namespace codingskills.App.Infrastructure.Repositories
             this.csvSet = csvSet;
         }
 
+        public void InitLocation(string location)
+        {
+            csvSet.InitLocation(location);
+        }
+
         private IList<T> Items 
         {
             get => _items ?? (_items = this.csvSet.ReadCsv());  

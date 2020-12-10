@@ -6,13 +6,13 @@ namespace codingskills.App.Infrastructure.UnitOfWorks
     public class CompanyUnitOfWork: ICompanyUnitOfWork
     {
         public CompanyUnitOfWork(
-            CatalogRepository catalogARepository, 
-            SupplierRepository supplierARepository, 
-            SupplierProductBarcodeRepository barcodeARepository)
+            IRepository<Catalog> catalogRepository, 
+            IRepository<Supplier> supplierRepository, 
+            IRepository<SupplierProductBarcode> barcodeRepository)
         {
-            Catalogs = catalogARepository;
-            Suppliers = supplierARepository;
-            Barcodes = barcodeARepository;
+            Catalogs = catalogRepository;
+            Suppliers = supplierRepository;
+            Barcodes = barcodeRepository;
         }
 
         public IRepository<Supplier> Suppliers { get; private set; }

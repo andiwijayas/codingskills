@@ -11,6 +11,7 @@
   * `dotnet run --project .\codingskills.App\codingskills.App.csproj .\input .\output`
 
 - Once the application is running you would be presented with the Catalog Merging result. To run the other operations, select from option 1 to 4.
+- Output from the Merge can be found on folder `.output\result_output2.csv`
 
 <img src="./menu.png" width="800px" height="auto">
 
